@@ -1,17 +1,15 @@
 # Selenium Image Checker Report
 
-Last updated: 2024-09-23T05:30:45.139209
+Last updated: 2024-09-23T05:40:49.339348
 
 ## Summary
 
 | URL | Chrome Status | Firefox Status |
 |-----|---------------|----------------|
-| https://adengroup.com | OK | OK |
 | https://www.adengroup.com | OK | OK |
-| https://adenenergies.com | OK | OK |
 | https://www.adenenergies.com | OK | OK |
-| https://nx-park.com | OK | OK |
 | https://www.nx-park.com | OK | OK |
+| https://the-internet.herokuapp.com/broken_images | Missing Images | Missing Images |
 
 ## Details
 
