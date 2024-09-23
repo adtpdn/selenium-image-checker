@@ -1,8 +1,8 @@
 import json
-from datetime import datetime
+from string import Template
 
 def generate_html(results):
-    html = """
+    html_template = Template("""
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -10,29 +10,29 @@ def generate_html(results):
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Image Check Status</title>
         <style>
-            body {{ line-height: 1.6; padding: 20px; }}
-            h1 {{ color: #333; }}
-            table {{ border-collapse: collapse; width: 100%; }}
-            th, td {{ border: 1px solid #ddd; padding: 8px; text-align: left; }}
-            th {{ background-color: #f2f2f2; }}
-            .ok {{ color: green; }}
-            .error {{ color: red; }}
+            body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; }
+            h1 { color: #333; }
+            table { border-collapse: collapse; width: 100%; }
+            th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+            th { background-color: #f2f2f2; }
+            .ok { color: green; }
+            .error { color: red; }
         </style>
     </head>
     <body>
         <h1>Image Check Status</h1>
-        <p>Last updated: {timestamp}</p>
+        <p>Last updated: $timestamp</p>
         <table>
             <tr>
                 <th>URL</th>
                 <th>Chrome Status</th>
                 <th>Firefox Status</th>
             </tr>
-            {table_rows}
+            $table_rows
         </table>
     </body>
     </html>
-    """
+    """)
 
     rows = ""
     for url in results['chrome']:
@@ -46,7 +46,7 @@ def generate_html(results):
         </tr>
         """
 
-    return html.format(timestamp=results['timestamp'], table_rows=rows)
+    return html_template.substitute(timestamp=results['timestamp'], table_rows=rows)
 
 with open('results.json', 'r') as f:
     results = json.load(f)
