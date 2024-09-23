@@ -24,15 +24,27 @@ jobs:
     - name: Run image checker
       run: python image_checker.py
 
+    - name: Configure Git
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
     - name: Generate HTML report
       run: |
         mkdir -p public
         python generate_report.py
 
-    - name: Configure Git
+    - name: Commit and push if changed
       run: |
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git config --global user.email "action@github.com"
+        git add README.md
+        git config --global user.name "GitHub Action"
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Update README with latest image check results" && git push)
+
+    - name: Create issues for missing images
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: python create_issues.py
   
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
