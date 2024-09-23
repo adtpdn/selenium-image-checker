@@ -10,7 +10,7 @@ def generate_html(results):
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Image Check Status</title>
         <style>
-            body {{ font-family: Arial, sans-serif; }}
+            body {{ font-family: monospace; font-size: 20px; width: 50%; display: flex; flex-direction: column; margin: 0 auto; }}
             table {{ border-collapse: collapse; }}
             th, td {{ border: 1px solid black; padding: 5px; }}
             .ok {{ color: green; }}

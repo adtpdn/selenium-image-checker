@@ -20,7 +20,7 @@ Last updated: {results['timestamp']}
     readme += """
 ## Details
 
-For more detailed information, please check the [full report](https://yourusername.github.io/selenium-image-checker/).
+For more detailed information, please check the [full report](https://adtpdn.github.io/selenium-image-checker/).
 
 ## About
 
