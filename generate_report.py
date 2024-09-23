@@ -1,5 +1,6 @@
 import json
 from datetime import datetime
+import pytz
 
 def generate_html(results):
     html_template = """
@@ -8,33 +9,91 @@ def generate_html(results):
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Image Check Status</title>
+        <title>Image Check Status Report</title>
         <style>
-            body {{ font-family: monospace; font-size: 20px; width: 50%; display: flex; flex-direction: column; margin: 0 auto; }}
-            table {{ border-collapse: collapse; }}
-            th, td {{ border: 1px solid black; padding: 5px; }}
-            .ok {{ color: green; }}
-            .error {{ color: red; }}
+            body {{
+                font-family: 'Courier New', Courier, monospace;
+                background-color: #0C0C0C;
+                color: #CCCCCC;
+                margin: 0;
+                padding: 20px;
+                line-height: 1.6;
+            }}
+            .container {{
+                max-width: 800px;
+                margin: 0 auto;
+            }}
+            h1, h2 {{
+                color: #00FF00;
+            }}
+            table {{
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 20px;
+            }}
+            th, td {{
+                border: 1px solid #444;
+                padding: 10px;
+                text-align: left;
+            }}
+            th {{
+                background-color: #1E1E1E;
+            }}
+            .ok {{ color: #00FF00; }}
+            .error {{ color: #FF0000; }}
+            .details {{
+                background-color: #1E1E1E;
+                padding: 15px;
+                border-radius: 5px;
+                margin-top: 20px;
+            }}
         </style>
     </head>
     <body>
-        <h1>Image Check Status</h1>
-        <p>Last updated: {timestamp}</p>
-        <table>
-            <tr><th>URL</th><th>Chrome Status</th><th>Firefox Status</th></tr>
-            {table_rows}
-        </table>
+        <div class="container">
+            <h1>Image Check Status Report</h1>
+            <p>Report generated on: {timestamp}</p>
+            <h2>Summary</h2>
+            <table>
+                <tr><th>URL</th><th>Chrome Status</th><th>Firefox Status</th></tr>
+                {table_rows}
+            </table>
+            <h2>Detailed Error Report</h2>
+            <div class="details">
+                {error_details}
+            </div>
+        </div>
     </body>
     </html>
     """
 
     rows = ""
+    error_details = ""
     for url, data in results['chrome'].items():
         chrome_status = data['status']
         firefox_status = results['firefox'][url]['status']
-        rows += f"<tr><td>{url}</td><td class='{chrome_status.lower()}'>{chrome_status}</td><td class='{firefox_status.lower()}'>{firefox_status}</td></tr>"
+        rows += f"<tr><td>{url}</td><td class='{chrome_status.lower().replace(' ', '-')}'>{chrome_status}</td><td class='{firefox_status.lower().replace(' ', '-')}'>{firefox_status}</td></tr>"
+        
+        if chrome_status == 'Missing Images' or firefox_status == 'Missing Images':
+            error_details += f"<h3>{url}</h3>"
+            if chrome_status == 'Missing Images':
+                error_details += "<h4>Chrome:</h4><ul>"
+                for img in data['missing_images']:
+                    error_details += f"<li>{img['name']} ({img['url']})</li>"
+                error_details += "</ul>"
+            if firefox_status == 'Missing Images':
+                error_details += "<h4>Firefox:</h4><ul>"
+                for img in results['firefox'][url]['missing_images']:
+                    error_details += f"<li>{img['name']} ({img['url']})</li>"
+                error_details += "</ul>"
 
-    return html_template.format(timestamp=results['timestamp'], table_rows=rows)
+    # Convert timestamp to GMT+8
+    timestamp = datetime.fromisoformat(results['timestamp'])
+    gmt8 = pytz.timezone('Asia/Singapore')
+    timestamp_gmt8 = timestamp.astimezone(gmt8)
+    formatted_timestamp = timestamp_gmt8.strftime("%Y-%m-%d %H:%M:%S %Z")
+
+    return html_template.format(timestamp=formatted_timestamp, table_rows=rows, error_details=error_details)
 
 try:
     # Read the results
