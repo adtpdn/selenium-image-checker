@@ -34,6 +34,14 @@ jobs:
         mkdir -p public
         python generate_report.py
 
+    - name: Create issues for missing images
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: python create_issues.py
+  
+    - name: Update README.md
+      run: python generate_readme.py
+
     - name: Commit and push if changed
       run: |
         git config --global user.email "action@github.com"
@@ -41,11 +49,6 @@ jobs:
         git config --global user.name "GitHub Action"
         git diff --quiet && git diff --staged --quiet || (git commit -m "Update README with latest image check results" && git push)
 
-    - name: Create issues for missing images
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: python create_issues.py
-  
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
