@@ -25,12 +25,9 @@ jobs:
       run: python image_checker.py
 
     - name: Generate HTML report
-      run: python generate_report.py
-
-    - name: Create issues for missing images
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: python create_issues.py
+      run: |
+        mkdir -p public
+        python generate_report.py
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3

@@ -1,0 +1,11 @@
+{
+    "timestamp": "2023-05-01 12:00:00",
+    "chrome": {
+        "https://example.com": {"status": "OK"},
+        "https://example.org": {"status": "ERROR"}
+    },
+    "firefox": {
+        "https://example.com": {"status": "OK"},
+        "https://example.org": {"status": "OK"}
+    }
+}
