@@ -8,13 +8,11 @@ from selenium.webdriver.chrome.options import Options as ChromeOptions
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 
 urls_to_check = [
-    'https://adengroup.com',
     'https://www.adengroup.com',
-    'https://adenenergies.com',
     'https://www.adenenergies.com',
-    'https://nx-park.com',
-    'https://www.nx-park.com'
-    # Add more URLs as needed
+    'https://www.nx-park.com',
+    # Test the real broken image on web
+    'https://the-internet.herokuapp.com/broken_images'
 ]
 
 def check_images_on_page(driver, url):
