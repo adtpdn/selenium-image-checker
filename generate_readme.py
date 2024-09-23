@@ -1,13 +1,12 @@
 import json
-from datetime import datetime
-import pytz
+from datetime import datetime, timedelta
 
 def generate_readme(results):
     # Convert timestamp to GMT+8
     timestamp = datetime.fromisoformat(results['timestamp'])
-    gmt8 = pytz.timezone('Asia/Singapore')
-    timestamp_gmt8 = timestamp.astimezone(gmt8)
-    formatted_timestamp = timestamp_gmt8.strftime("%Y-%m-%d %H:%M:%S %Z")
+    gmt8_offset = timedelta(hours=8)
+    timestamp_gmt8 = timestamp + gmt8_offset
+    formatted_timestamp = timestamp_gmt8.strftime("%Y-%m-%d %H:%M:%S GMT+8")
 
     readme = f"""# Selenium Image Checker Report
 
@@ -76,10 +75,16 @@ For a visual representation of this report, please refer to our [full HTML repor
 
     return readme
 
-with open('results.json', 'r') as f:
-    results = json.load(f)
+try:
+    with open('results.json', 'r') as f:
+        results = json.load(f)
 
-readme_content = generate_readme(results)
+    readme_content = generate_readme(results)
 
-with open('README.md', 'w') as f:
-    f.write(readme_content)
+    with open('README.md', 'w') as f:
+        f.write(readme_content)
+
+    print("README generated successfully.")
+except Exception as e:
+    print(f"An error occurred: {str(e)}")
+    raise

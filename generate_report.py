@@ -1,6 +1,5 @@
 import json
-from datetime import datetime
-import pytz
+from datetime import datetime, timedelta
 
 def generate_html(results):
     html_template = """
@@ -89,9 +88,9 @@ def generate_html(results):
 
     # Convert timestamp to GMT+8
     timestamp = datetime.fromisoformat(results['timestamp'])
-    gmt8 = pytz.timezone('Asia/Singapore')
-    timestamp_gmt8 = timestamp.astimezone(gmt8)
-    formatted_timestamp = timestamp_gmt8.strftime("%Y-%m-%d %H:%M:%S %Z")
+    gmt8_offset = timedelta(hours=8)
+    timestamp_gmt8 = timestamp + gmt8_offset
+    formatted_timestamp = timestamp_gmt8.strftime("%Y-%m-%d %H:%M:%S GMT+8")
 
     return html_template.format(timestamp=formatted_timestamp, table_rows=rows, error_details=error_details)
 
