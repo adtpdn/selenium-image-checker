@@ -8,8 +8,12 @@ from selenium.webdriver.chrome.options import Options as ChromeOptions
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 
 urls_to_check = [
-    'https://example.com',
-    'https://example.org',
+    'https://adengroup.com',
+    'https://www.adengroup.com',
+    'https://adenenergies.com',
+    'https://www.adenenergies.com',
+    'https://nx-park.com',
+    'https://www.nx-park.com'
     # Add more URLs as needed
 ]
 
