@@ -4,7 +4,7 @@
 
 This report provides an overview of the image availability status across specified URLs, as checked by our automated Selenium Image Checker tool. The check was performed using both Chrome and Firefox browsers to ensure cross-browser compatibility.
 
-**Report Generation Date:** 2024-12-13 08:42:44 GMT+8
+**Report Generation Date:** 2024-12-14 08:41:24 GMT+8
 
 ## Status Overview
 
@@ -31,8 +31,6 @@ Missing images:
 - data3.svg (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/data3.svg)
 - ae_h478.webp (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/ae_h478.webp)
 - data4.svg (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/data4.svg)
-- data1.svg (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/data1.svg)
-- data2.svg (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/data2.svg)
 - data3.svg (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/data3.svg)
 - data4.svg (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/data4.svg)
 - SAM_3358-2-1536x882-1.webp (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/SAM_3358-2-1536x882-1.webp)
