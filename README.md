@@ -4,7 +4,7 @@
 
 This report provides an overview of the image availability status across specified URLs, as checked by our automated Selenium Image Checker tool. The check was performed using both Chrome and Firefox browsers to ensure cross-browser compatibility.
 
-**Report Generation Date:** 2024-12-15 08:46:05 GMT+8
+**Report Generation Date:** 2024-12-16 08:44:21 GMT+8
 
 ## Status Overview
 
@@ -24,6 +24,7 @@ Below is a comprehensive breakdown of the results, including specific details on
 #### Chrome
 
 Missing images:
+- Energy%20efficiency%202.webp (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/Energy%20efficiency%202.webp)
 - data1.svg (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/data1.svg)
 - ae_h2.webp (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/ae_h2.webp)
 - data2.svg (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/data2.svg)
@@ -32,6 +33,7 @@ Missing images:
 - ae_h478.webp (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/ae_h478.webp)
 - data4.svg (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/data4.svg)
 - data1.svg (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/data1.svg)
+- data2.svg (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/data2.svg)
 - data3.svg (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/data3.svg)
 - data4.svg (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/data4.svg)
 - SAM_3358-2-1536x882-1.webp (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/SAM_3358-2-1536x882-1.webp)
@@ -41,6 +43,7 @@ Missing images:
 - SAM_3358-2-1536x882-1.webp (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/SAM_3358-2-1536x882-1.webp)
 - Geely.png (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/Geely.png)
 - jhonson-controls.webp (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/jhonson-controls.webp)
+- SAM_3358-2-1536x882-1.webp (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/SAM_3358-2-1536x882-1.webp)
 - img-scope-2-640w.png (https://adenenergies.com/wp-content/uploads/2024/11/img-scope-2-640w.png)
 - img-scope-3-640w.png (https://adenenergies.com/wp-content/uploads/2024/11/img-scope-3-640w.png)
 - img-scope-4-640w.png (https://adenenergies.com/wp-content/uploads/2024/11/img-scope-4-640w.png)
