@@ -4,7 +4,7 @@
 
 This report provides an overview of the image availability status across specified URLs, as checked by our automated Selenium Image Checker tool. The check was performed using both Chrome and Firefox browsers to ensure cross-browser compatibility.
 
-**Report Generation Date:** 2024-12-26 08:38:06 GMT+8
+**Report Generation Date:** 2024-12-27 08:38:23 GMT+8
 
 ## Status Overview
 
@@ -24,16 +24,13 @@ Below is a comprehensive breakdown of the results, including specific details on
 #### Chrome
 
 Missing images:
-- ae_h3.webp (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/ae_h3.webp)
 - data3.svg (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/data3.svg)
 - ae_h478.webp (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/ae_h478.webp)
 - data4.svg (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/data4.svg)
 - data3.svg (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/data3.svg)
 - data4.svg (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/data4.svg)
-- Geely.png (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/Geely.png)
 - jhonson-controls.webp (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/jhonson-controls.webp)
 - jhonson-controls.webp (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/jhonson-controls.webp)
-- Geely.png (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/Geely.png)
 - jhonson-controls.webp (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/jhonson-controls.webp)
 - turbin.png (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/turbin.png)
 
