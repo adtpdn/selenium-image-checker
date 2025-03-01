@@ -4,7 +4,7 @@
 
 This report provides an overview of the image availability status across specified URLs, as checked by our automated Selenium Image Checker tool. The check was performed using both Chrome and Firefox browsers to ensure cross-browser compatibility.
 
-**Report Generation Date:** 2025-02-28 10:16:21 GMT+8
+**Report Generation Date:** 2025-03-01 08:43:49 GMT+8
 
 ## Status Overview
 
@@ -12,7 +12,7 @@ This report provides an overview of the image availability status across specifi
 |-----|---------------|----------------|
 | https://www.adengroup.com | OK | OK |
 | https://www.adenenergies.com | Missing Images | Missing Images |
-| https://www.nx-park.com | OK | OK |
+| https://www.nx-park.com | OK | Missing Images |
 | https://the-internet.herokuapp.com/broken_images | Missing Images | Missing Images |
 
 ## Detailed Findings
@@ -24,6 +24,7 @@ Below is a comprehensive breakdown of the results, including specific details on
 #### Chrome
 
 Missing images:
+- ae_h2.webp (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/ae_h2.webp)
 - data2.svg (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/data2.svg)
 - ae_h3.webp (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/ae_h3.webp)
 - data3.svg (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/data3.svg)
@@ -80,6 +81,13 @@ Missing images:
 - img-scope-3-640w.png (https://adenenergies.com/wp-content/uploads/2024/11/img-scope-3-640w.png)
 - img-scope-4-640w.png (https://adenenergies.com/wp-content/uploads/2024/11/img-scope-4-640w.png)
 - turbin.png (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/turbin.png)
+
+### https://www.nx-park.com
+
+#### Firefox
+
+Missing images:
+- NX.svg (https://www.nx-park.com/wp-content/themes/nxparkupdate/assets/NX.svg)
 
 ### https://the-internet.herokuapp.com/broken_images
 
