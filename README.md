@@ -4,7 +4,7 @@
 
 This report provides an overview of the image availability status across specified URLs, as checked by our automated Selenium Image Checker tool. The check was performed using both Chrome and Firefox browsers to ensure cross-browser compatibility.
 
-**Report Generation Date:** 2025-05-27 08:44:05 GMT+8
+**Report Generation Date:** 2025-05-28 08:45:20 GMT+8
 
 ## Status Overview
 
@@ -43,7 +43,6 @@ Missing images:
 - Geely.png (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/Geely.png)
 - jhonson-controls.webp (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/jhonson-controls.webp)
 - SAM_3358-2-1536x882-1.webp (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/SAM_3358-2-1536x882-1.webp)
-- img-scope-1-640w.png (https://adenenergies.com/wp-content/uploads/2024/11/img-scope-1-640w.png)
 - img-scope-2-640w.png (https://adenenergies.com/wp-content/uploads/2024/11/img-scope-2-640w.png)
 - img-scope-3-640w.png (https://adenenergies.com/wp-content/uploads/2024/11/img-scope-3-640w.png)
 - img-scope-4-640w.png (https://adenenergies.com/wp-content/uploads/2024/11/img-scope-4-640w.png)
@@ -89,6 +88,7 @@ Missing images:
 #### Chrome
 
 Missing images:
+- Indoor%20Space%201.png (https://www.nx-park.com/wp-content/themes/nxparkupdate/assets/Indoor%20Space%201.png)
 - Edited%20-%20Boardroom%20test.png (https://www.nx-park.com/wp-content/themes/nxparkupdate/assets/Edited%20-%20Boardroom%20test.png)
 - ezgif.com-video-to-gif.gif (https://www.nx-park.com/wp-content/themes/nxparkupdate/assets/ezgif.com-video-to-gif.gif)
 - Icon%20awesome-microphone-alt.svg (https://www.nx-park.com/wp-content/themes/nxparkupdate/assets/Icon%20awesome-microphone-alt.svg)
