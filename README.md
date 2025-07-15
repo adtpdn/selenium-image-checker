@@ -4,7 +4,7 @@
 
 This report provides an overview of the image availability status across specified URLs, as checked by our automated Selenium Image Checker tool. The check was performed using both Chrome and Firefox browsers to ensure cross-browser compatibility.
 
-**Report Generation Date:** 2025-07-14 08:03:42 GMT+8
+**Report Generation Date:** 2025-07-15 08:03:59 GMT+8
 
 ## Status Overview
 
@@ -43,7 +43,6 @@ Missing images:
 - Geely.png (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/Geely.png)
 - jhonson-controls.webp (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/jhonson-controls.webp)
 - SAM_3358-2-1536x882-1.webp (https://adenenergies.com/wp-content/themes/newadenenergies/adenenergies/assets/content-img/SAM_3358-2-1536x882-1.webp)
-- img-scope-1-640w.png (https://adenenergies.com/wp-content/uploads/2024/11/img-scope-1-640w.png)
 - img-scope-2-640w.png (https://adenenergies.com/wp-content/uploads/2024/11/img-scope-2-640w.png)
 - img-scope-3-640w.png (https://adenenergies.com/wp-content/uploads/2024/11/img-scope-3-640w.png)
 - img-scope-4-640w.png (https://adenenergies.com/wp-content/uploads/2024/11/img-scope-4-640w.png)
